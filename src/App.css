@@ -7,11 +7,20 @@
   pointer-events: none;
 }
 
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
+    width: 20%;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 50%; /* Crée un cercle en utilisant la moitié de la largeur et de la hauteur */
+    overflow: hidden;
   }
 }
+
+
 
 .App-header {
   background-color: #282c34;

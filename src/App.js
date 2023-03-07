@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import HomePage from './HomePage';
+import ToDoList from './ToDoList';
+import StreamingSite from './steaming';
+import CV from './CV';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Definition des routes */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/ToDoList" element={<ToDoList />} />
+        <Route path="/CV_Enzo" element={<CV />} />
+        <Route path="/streaming" element={<StreamingSite />} />
+      </Routes>
+    </Router>
   );
 }
 
